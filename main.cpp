@@ -49,7 +49,7 @@ class aAplicacion: public wxApp
     bool OnInit();
 };
 
-IMPLEMENT_APP(aAplicacion) //este macro qué pedo? #2
+
 
 
 /* implementación del método OnInit de wxApp. Sólo puede haber uno.
@@ -59,20 +59,38 @@ bool aAplicacion::OnInit()
 {
     bool wxsOK=true;
 
-    FrameManipulacion* frame = new FrameManipulacion(0);
-    frame->Show();
-    SetTopWindow(frame);
+        FrameManipulacion* frame = new FrameManipulacion(0);
+        frame->Show();
+        SetTopWindow(frame);
 
-    //frame->SetSizer(sizer);
-    //frame->SetAutoLayout(true);
-    //frame->Show();
+        //frame->SetSizer(sizer);
+        //frame->SetAutoLayout(true);
+        //frame->Show();
 
-    TextDrop *td = new TextDrop(wxT("Text Drop"));
-    td->Show(true);
+        TextDrop *td = new TextDrop(wxT("Text Drop"));
+        td->Show(true);
 
-    thread hilo(prueba_nana);
-
-    hilo.detach();
     return wxsOK;
 }
 
+
+int main(int argc, char** argv)
+{
+    std::cout << "sirve esto?" << std::endl;
+
+
+    wxApp::SetInstance(new aAplicacion());
+    wxEntryStart(argc, argv);
+    wxTheApp->OnInit();
+
+    thread hilo(prueba_nana);
+
+    wxTheApp->OnRun();
+    wxTheApp->OnExit();
+    wxEntryCleanup();
+
+
+    std::cout << "sirve esto?" << std::endl;
+
+    hilo.join();
+}

@@ -54,7 +54,7 @@
 	<cstdlib>
 	<libpq-fe.h>
 
-1467746242 source:/home/turambar/proyectosC++/Papas/main.cpp
+1467843268 source:/home/turambar/proyectosC++/Papas/main.cpp
 	"wx/wx.h"
 	<wx/sizer.h>
 	<wx/grid.h>
@@ -62,9 +62,12 @@
 	<wx/button.h>
 	<iostream>
 	<string>
+	<thread>
 	<Database.h>
 	<FrameManipulacion.h>
 	"TextDrop.h"
+	<nana/gui/wvl.hpp>
+	<nana/gui/widgets/listbox.hpp>
 
 1467748193 /home/turambar/proyectosC++/Papas/include/FrameManipulacion.h
 	<wx/frame.h>
@@ -108,4 +111,163 @@
 	<wx/dnd.h>
 	<wx/listctrl.h>
 	<wx/generic/dirctrlg.h>
+
+1447167067 /home/turambar/standAlones/nana/include/nana/gui/wvl.hpp
+	"programming_interface.hpp"
+	"screen.hpp"
+	"widgets/form.hpp"
+	"drawing.hpp"
+	"msgbox.hpp"
+	"place.hpp"
+
+1454907460 /home/turambar/standAlones/nana/include/nana/gui/programming_interface.hpp
+	<nana/config.hpp>
+	"effects.hpp"
+	"detail/general_events.hpp"
+	"detail/color_schemes.hpp"
+	<nana/paint/image.hpp>
+	<memory>
+
+1454907460 /home/turambar/standAlones/nana/include/nana/config.hpp
+	"c++defines.hpp"
+
+1454907460 /home/turambar/standAlones/nana/include/nana/c++defines.hpp
+	<iosfwd>
+	<iosfwd>
+
+1447167067 /home/turambar/standAlones/nana/include/nana/gui/effects.hpp
+	<cstddef>
+	<nana/paint/graphics.hpp>
+
+1454907461 /home/turambar/standAlones/nana/include/nana/paint/graphics.hpp
+	"../basic_types.hpp"
+	"../gui/basis.hpp"
+	"pixel_buffer.hpp"
+	<memory>
+
+1454907460 /home/turambar/standAlones/nana/include/nana/basic_types.hpp
+	<nana/deploy.hpp>
+	<cctype>
+
+1454907460 /home/turambar/standAlones/nana/include/nana/deploy.hpp
+	<nana/config.hpp>
+	<nana/verbose_preprocessor.hpp>
+	<stdexcept>
+	<nana/charset.hpp>
+	<cstddef>
+	<memory>
+	<type_traits>
+	<utility>
+
+1454907461 /home/turambar/standAlones/nana/include/nana/verbose_preprocessor.hpp
+
+1454907460 /home/turambar/standAlones/nana/include/nana/charset.hpp
+	<string>
+
+1447694839 /home/turambar/standAlones/nana/include/nana/gui/basis.hpp
+	"../basic_types.hpp"
+	"../traits.hpp"
+
+1454907461 /home/turambar/standAlones/nana/include/nana/traits.hpp
+	<type_traits>
+
+1447167067 /home/turambar/standAlones/nana/include/nana/paint/pixel_buffer.hpp
+	<nana/gui/basis.hpp>
+	<memory>
+
+1454907460 /home/turambar/standAlones/nana/include/nana/gui/detail/general_events.hpp
+	<nana/gui/basis.hpp>
+	"event_code.hpp"
+	"internal_scope_guard.hpp"
+	<type_traits>
+	<functional>
+	<memory>
+	<vector>
+
+1409500994 /home/turambar/standAlones/nana/include/nana/gui/detail/event_code.hpp
+
+1410789890 /home/turambar/standAlones/nana/include/nana/gui/detail/internal_scope_guard.hpp
+
+1447167067 /home/turambar/standAlones/nana/include/nana/gui/detail/color_schemes.hpp
+	"widget_colors.hpp"
+
+1423350891 /home/turambar/standAlones/nana/include/nana/gui/detail/widget_colors.hpp
+	<nana/gui/basis.hpp>
+	<memory>
+
+1454907461 /home/turambar/standAlones/nana/include/nana/paint/image.hpp
+	"graphics.hpp"
+
+1439496156 /home/turambar/standAlones/nana/include/nana/gui/screen.hpp
+	"basis.hpp"
+	<functional>
+	<memory>
+
+1439496156 /home/turambar/standAlones/nana/include/nana/gui/widgets/form.hpp
+	"widget.hpp"
+
+1454907461 /home/turambar/standAlones/nana/include/nana/gui/widgets/widget.hpp
+	"../basis.hpp"
+	"../programming_interface.hpp"
+	<nana/internationalization.hpp>
+	<nana/gui/detail/drawer.hpp>
+	<functional>
+
+1454907461 /home/turambar/standAlones/nana/include/nana/internationalization.hpp
+	"basic_types.hpp"
+	<vector>
+	<sstream>
+	<functional>
+	<memory>
+
+1447167067 /home/turambar/standAlones/nana/include/nana/gui/detail/drawer.hpp
+	<vector>
+	"general_events.hpp"
+	<nana/paint/graphics.hpp>
+	<functional>
+
+1413449218 /home/turambar/standAlones/nana/include/nana/gui/drawing.hpp
+	"widgets/widget.hpp"
+	"../traits.hpp"
+
+1454907460 /home/turambar/standAlones/nana/include/nana/gui/msgbox.hpp
+	<sstream>
+
+1454907460 /home/turambar/standAlones/nana/include/nana/gui/place.hpp
+	<nana/gui/basis.hpp>
+	<utility>
+	<memory>
+	<functional>
+
+1454907461 /home/turambar/standAlones/nana/include/nana/gui/widgets/listbox.hpp
+	"widget.hpp"
+	"detail/inline_widget.hpp"
+	<nana/pat/abstract_factory.hpp>
+	<nana/concepts.hpp>
+	<nana/key_type.hpp>
+	<functional>
+	<initializer_list>
+
+1439496156 /home/turambar/standAlones/nana/include/nana/gui/widgets/detail/inline_widget.hpp
+	"../../basis.hpp"
+
+1447167067 /home/turambar/standAlones/nana/include/nana/pat/abstract_factory.hpp
+	"cloneable.hpp"
+	<memory>
+
+1454907461 /home/turambar/standAlones/nana/include/nana/pat/cloneable.hpp
+	<nana/c++defines.hpp>
+	<cstddef>
+	<type_traits>
+	<memory>
+
+1454907460 /home/turambar/standAlones/nana/include/nana/concepts.hpp
+	<nana/any.hpp>
+
+1454907460 /home/turambar/standAlones/nana/include/nana/any.hpp
+	<typeinfo>
+	<type_traits>
+	"c++defines.hpp"
+
+1439496157 /home/turambar/standAlones/nana/include/nana/key_type.hpp
 
