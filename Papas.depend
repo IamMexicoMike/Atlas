@@ -1,0 +1,111 @@
+# depslib dependency file v1.0
+1467148377 source:/home/turambar/ProyectosC++/Papas/main.cpp
+	"wx/wx.h"
+	"wx/sizer.h"
+	<wx/grid.h>
+	<wx/panel.h>
+	<iostream>
+	<string>
+	<Database.h>
+	"/home/turambar/borrame.h"
+
+1465250840 source:/home/turambar/ProyectosC++/Papas/Database.cc
+	<iostream>
+	<string>
+	<cstdio>
+	<cstdlib>
+	<libpq-fe.h>
+
+1464300187 /usr/local/pgsql/include/libpq-fe.h
+	<stdio.h>
+	"postgres_ext.h"
+
+1464300187 /usr/local/pgsql/include/postgres_ext.h
+	"pg_config_ext.h"
+
+1464300187 /usr/local/pgsql/include/pg_config_ext.h
+
+1465252605 /home/turambar/ProyectosC++/Papas/include/Database.h
+	<iostream>
+	<string>
+	<cstdio>
+	<cstdlib>
+	<libpq-fe.h>
+
+1465251863 source:/home/turambar/ProyectosC++/Papas/src/Database.cpp
+	"Database.h"
+
+1466559021 /home/turambar/borrame.h
+
+1465250840 source:/home/turambar/proyectosC++/Papas/Database.cc
+	<iostream>
+	<string>
+	<cstdio>
+	<cstdlib>
+	<libpq-fe.h>
+
+1467241095 source:/home/turambar/proyectosC++/Papas/src/Database.cpp
+	"Database.h"
+
+1467228186 /home/turambar/proyectosC++/Papas/include/Database.h
+	<iostream>
+	<string>
+	<cstdio>
+	<cstdlib>
+	<libpq-fe.h>
+
+1467746242 source:/home/turambar/proyectosC++/Papas/main.cpp
+	"wx/wx.h"
+	<wx/sizer.h>
+	<wx/grid.h>
+	<wx/panel.h>
+	<wx/button.h>
+	<iostream>
+	<string>
+	<Database.h>
+	<FrameManipulacion.h>
+	"TextDrop.h"
+
+1467748193 /home/turambar/proyectosC++/Papas/include/FrameManipulacion.h
+	<wx/frame.h>
+	<wx/sizer.h>
+	<wx/menu.h>
+	<wx/grid.h>
+	<wx/button.h>
+	<wx/combobox.h>
+	<wx/panel.h>
+	<wx/statusbr.h>
+	<iostream>
+	<vector>
+	<memory>
+	<Database.h>
+	<PanelBasico.h>
+
+1467238393 /home/turambar/proyectosC++/Papas/include/PanelBasico.h
+	<wx/grid.h>
+	<wx/panel.h>
+
+1467240090 source:/home/turambar/proyectosC++/Papas/src/PanelBasico.cpp
+	"PanelBasico.h"
+	"wx/wx.h"
+	<iostream>
+	<string>
+	<Database.h>
+
+1467748193 source:/home/turambar/proyectosC++/Papas/src/FrameManipulacion.cpp
+	"FrameManipulacion.h"
+	<wx/wx.h>
+
+1467748193 source:/home/turambar/proyectosC++/Papas/src/TextDrop.cpp
+	"TextDrop.h"
+	<wx/treectrl.h>
+	<wx/dirctrl.h>
+	<wx/dir.h>
+	<wx/splitter.h>
+
+1467748193 /home/turambar/proyectosC++/Papas/include/TextDrop.h
+	<wx/wx.h>
+	<wx/dnd.h>
+	<wx/listctrl.h>
+	<wx/generic/dirctrlg.h>
+
