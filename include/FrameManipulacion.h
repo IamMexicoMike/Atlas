@@ -21,7 +21,7 @@ class FrameManipulacion: public wxFrame
 {
     public:
         FrameManipulacion(wxWindow* parent, wxWindowID id=-1);
-        wxGrid* generarTabla(wxWindow* parent);
+        std::unique_ptr<wxGrid> generarTabla(wxWindow* parent);
         virtual ~FrameManipulacion();
 
     private:
@@ -52,12 +52,11 @@ class FrameManipulacion: public wxFrame
 
         wxPanel* Panel1;
         wxStatusBar* sbBarraEstatus;
-        wxGrid* gTabla;
         wxButton* bCommit;
         wxComboBox* cbSeleccionarTabla;
 
         //PanelBasico* pbPanel;
-        wxGrid* tabla;
+        std::unique_ptr<wxGrid> tabla;
 };
 
 #endif // FRAMEMANIPULACION_H

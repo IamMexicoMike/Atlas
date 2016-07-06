@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <thread>
+#include <memory>
 
 #include <Database.h>
 #include <FrameManipulacion.h>
@@ -15,27 +16,46 @@
 
 #include <nana/gui/wvl.hpp>
 #include <nana/gui/widgets/listbox.hpp>
+#include <nana/gui/widgets/button.hpp>
 
+/*
+template<typename T, typename... Ts>
+std::unique_ptr<T> make_unique(Ts&&... params)
+{
+    return std::unique_ptr<T>(new T(std::forward<Ts>(params)...));
+}
+*/
 void prueba_nana()
 {
     using namespace nana;
-        form fm;
-        listbox lb(fm, nana::rectangle(5, 5, 280, 120));
-        lb.append_header("Header", 100);
-    // this will attemp to use
-    // item_proxy cat_proxy::append (T &&t, bool set_value=false)
-    // to add a value any of wchar_t[4]  = "int"
-        // lb.at(0).append(STR("int"));
-    lb.at(0).append({"int"});
-    lb.at(0).append({"double"});
-        lb.anyobj(0, 0, 10);
-        lb.anyobj(0, 1, 0.1);
-        int * pi = lb.anyobj<int>(0, 0);          // it returns a nullptr if there is not an int object specified.
-    std::cout << "Index: (0,0) -> int value: " << *pi << std::endl;
-        double * pd = lb.anyobj<double>(0, 1); // it returns a nullptr if there is not an double object specified.
-    std::cout << "Index: (0,1) -> double value: " << *pd << std::endl;
-        fm.show();
-        exec();
+
+    //
+    //std::unique_ptr<FrameManipulacion> frame;
+    //frame = make_unique<FrameManipulacion>(nullptr);
+    //frame->Show();
+    FrameManipulacion frame(nullptr);
+    frame.Show();
+    //
+
+	form fm;
+	place plc(fm);
+	plc.div("<abc>");
+	button a(fm, "DB"), b(fm); //Porqué sólo funciona sólo a veces?
+	plc["abc"] << a << b;
+	plc.collocate();
+	fm.show();
+
+	a.events().click([&plc]
+	{
+		plc.modify("abc", "margin=10 vert<efg>"); //modify the field 'abc' and add a new child field 'efg'.
+		plc.collocate();
+		//frame = new FrameManipulacion(nullptr);
+        //frame->Show();
+
+
+	});
+
+	exec();
 }
 
 
@@ -74,6 +94,8 @@ bool aAplicacion::OnInit()
 }
 
 
+/*Esto da pie a toda una nueva manera de usar wxWidgets*/
+
 int main(int argc, char** argv)
 {
     std::cout << "sirve esto?" << std::endl;
@@ -87,10 +109,12 @@ int main(int argc, char** argv)
 
     wxTheApp->OnRun();
     wxTheApp->OnExit();
+
+    hilo.join(); //supongo que necesitamos limpiar todo el desvergue
     wxEntryCleanup();
 
 
     std::cout << "sirve esto?" << std::endl;
 
-    hilo.join();
+
 }

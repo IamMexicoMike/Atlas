@@ -30,7 +30,7 @@ FrameManipulacion::FrameManipulacion(wxWindow* parent,wxWindowID id) //ctor
 
     //Llenamos padre: Incluye lado izquierdo y tabla del lado derecho
     bsPadre->Add(bsOpciones, 1, wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL, 5);
-    bsPadre->Add(tabla, 1, wxALIGN_LEFT);
+    bsPadre->Add(tabla.get(), 1, wxALIGN_LEFT);
 
     //Llenamos lado izquierdo
     bsOpciones->Add(bCommit, 1, wxALL|wxALIGN_TOP, 5);
@@ -66,7 +66,7 @@ FrameManipulacion::~FrameManipulacion() //dtor
     //Destroy(FrameManipulacion) //macros...
 }
 
-wxGrid* FrameManipulacion::generarTabla(wxWindow* parent)
+std::unique_ptr<wxGrid> FrameManipulacion::generarTabla(wxWindow* parent)
 {
 
     Database db("user=postgres dbname=test");
@@ -92,7 +92,7 @@ wxGrid* FrameManipulacion::generarTabla(wxWindow* parent)
     int h = rows*TAM_POR_FILA;
 
     // Creamos un wxGrid en un smart pointer
-    wxGrid* grid = new wxGrid(parent, -1, wxPoint(0, 0), wxSize(w, h));
+    std::unique_ptr<wxGrid> grid(new wxGrid(parent, -1, wxPoint(0, 0), wxSize(w, h)));
 
     //Creamos la tabla
     grid->CreateGrid(rows, cols);
